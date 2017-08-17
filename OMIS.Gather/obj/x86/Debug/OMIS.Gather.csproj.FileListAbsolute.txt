@@ -1,0 +1,8 @@
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\bin\Debug\OMIS.Gather.exe
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\bin\Debug\OMIS.Gather.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\obj\x86\Debug\OMIS.Gather.frmMain.resources
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\obj\x86\Debug\OMIS.Gather.Properties.Resources.resources
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\obj\x86\Debug\OMIS.Gather.csproj.GenerateResource.Cache
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\obj\x86\Debug\OMIS.Gather.exe
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\obj\x86\Debug\OMIS.Gather.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Gather\obj\x86\Debug\OMIS.Gather.csprojResolveAssemblyReference.cache

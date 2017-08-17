@@ -1,0 +1,7 @@
+2016-11-12 13:44:38.806 Message: The given key was not present in the dictionary.
+Source: App_Web_kqtb5prc
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhOMIS\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhOMIS\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+

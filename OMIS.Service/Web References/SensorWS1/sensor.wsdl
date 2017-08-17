@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.3gvs.net/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.3gvs.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.3gvs.net/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadSensorDataInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageList" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadSensorDataInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadSensorDataInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceHeartbeatTime">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HeartbeatTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceHeartbeatTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceHeartbeatTimeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceCodeList" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="Status" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceSoftwareVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SoftwareVersion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CrcCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceSoftwareVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceSoftwareVersionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceDebugMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DebugMode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceDebugModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceDebugModeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSettingRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequestStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSettingRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSettingRequestResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSettingProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Process" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Time" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSettingProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSettingProcessResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSettingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResponseStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResponseContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ErrorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSettingResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateSettingResponseResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadSensorDataInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadSensorDataInfo" />
+  </wsdl:message>
+  <wsdl:message name="UploadSensorDataInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadSensorDataInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartbeatTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceHeartbeatTime" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartbeatTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceHeartbeatTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSoftwareVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceSoftwareVersion" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSoftwareVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceSoftwareVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceDebugModeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceDebugMode" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceDebugModeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceDebugModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSettingRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSettingRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSettingProcess" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSettingProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSettingResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartbeatTimeHttpGetIn">
+    <wsdl:part name="DeviceCode" type="s:string" />
+    <wsdl:part name="HeartbeatTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartbeatTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSoftwareVersionHttpGetIn">
+    <wsdl:part name="DeviceCode" type="s:string" />
+    <wsdl:part name="SoftwareVersion" type="s:string" />
+    <wsdl:part name="CrcCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSoftwareVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceDebugModeHttpGetIn">
+    <wsdl:part name="DeviceCode" type="s:string" />
+    <wsdl:part name="DebugMode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceDebugModeHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingRequestHttpGetIn">
+    <wsdl:part name="LogId" type="s:string" />
+    <wsdl:part name="RequestStatus" type="s:string" />
+    <wsdl:part name="RequestTime" type="s:string" />
+    <wsdl:part name="ErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingProcessHttpGetIn">
+    <wsdl:part name="LogId" type="s:string" />
+    <wsdl:part name="Process" type="s:string" />
+    <wsdl:part name="Time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingProcessHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingResponseHttpGetIn">
+    <wsdl:part name="LogId" type="s:string" />
+    <wsdl:part name="ResponseStatus" type="s:string" />
+    <wsdl:part name="ResponseTime" type="s:string" />
+    <wsdl:part name="ResponseContent" type="s:string" />
+    <wsdl:part name="ErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingResponseHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartbeatTimeHttpPostIn">
+    <wsdl:part name="DeviceCode" type="s:string" />
+    <wsdl:part name="HeartbeatTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartbeatTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSoftwareVersionHttpPostIn">
+    <wsdl:part name="DeviceCode" type="s:string" />
+    <wsdl:part name="SoftwareVersion" type="s:string" />
+    <wsdl:part name="CrcCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSoftwareVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceDebugModeHttpPostIn">
+    <wsdl:part name="DeviceCode" type="s:string" />
+    <wsdl:part name="DebugMode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceDebugModeHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingRequestHttpPostIn">
+    <wsdl:part name="LogId" type="s:string" />
+    <wsdl:part name="RequestStatus" type="s:string" />
+    <wsdl:part name="RequestTime" type="s:string" />
+    <wsdl:part name="ErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingProcessHttpPostIn">
+    <wsdl:part name="LogId" type="s:string" />
+    <wsdl:part name="Process" type="s:string" />
+    <wsdl:part name="Time" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingProcessHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingResponseHttpPostIn">
+    <wsdl:part name="LogId" type="s:string" />
+    <wsdl:part name="ResponseStatus" type="s:string" />
+    <wsdl:part name="ResponseTime" type="s:string" />
+    <wsdl:part name="ResponseContent" type="s:string" />
+    <wsdl:part name="ErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSettingResponseHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="ZyrhSensorServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadSensorDataInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上传传感器数据信息(数据上传透传接口)&lt;br/&gt;报文消息内容格式：以##开头的完整报文</wsdl:documentation>
+      <wsdl:input message="tns:UploadSensorDataInfoSoapIn" />
+      <wsdl:output message="tns:UploadSensorDataInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备心跳时间</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceHeartbeatTimeSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceHeartbeatTimeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备状态&lt;br /&gt;DeviceCodeList:设备编号列表，Status:1-在线，0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceStatusSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备软件程序版本</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSoftwareVersionSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceSoftwareVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备调试模式状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceDebugModeSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceDebugModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置发送状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingRequestSoapIn" />
+      <wsdl:output message="tns:UpdateSettingRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置进度</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingProcessSoapIn" />
+      <wsdl:output message="tns:UpdateSettingProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置回复状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingResponseSoapIn" />
+      <wsdl:output message="tns:UpdateSettingResponseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ZyrhSensorServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备心跳时间</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceHeartbeatTimeHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceHeartbeatTimeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备软件程序版本</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSoftwareVersionHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceSoftwareVersionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备调试模式状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceDebugModeHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceDebugModeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置发送状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingRequestHttpGetIn" />
+      <wsdl:output message="tns:UpdateSettingRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置进度</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingProcessHttpGetIn" />
+      <wsdl:output message="tns:UpdateSettingProcessHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置回复状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingResponseHttpGetIn" />
+      <wsdl:output message="tns:UpdateSettingResponseHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ZyrhSensorServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备心跳时间</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceHeartbeatTimeHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceHeartbeatTimeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备软件程序版本</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSoftwareVersionHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceSoftwareVersionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备调试模式状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceDebugModeHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceDebugModeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置发送状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingRequestHttpPostIn" />
+      <wsdl:output message="tns:UpdateSettingRequestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置进度</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingProcessHttpPostIn" />
+      <wsdl:output message="tns:UpdateSettingProcessHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设置回复状态</wsdl:documentation>
+      <wsdl:input message="tns:UpdateSettingResponseHttpPostIn" />
+      <wsdl:output message="tns:UpdateSettingResponseHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZyrhSensorServiceSoap" type="tns:ZyrhSensorServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://www.3gvs.net/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSensorDataInfo">
+      <soap:operation soapAction="http://www.3gvs.net/UploadSensorDataInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateDeviceHeartbeatTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateDeviceSoftwareVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateDeviceDebugMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateSettingRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateSettingProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <soap:operation soapAction="http://www.3gvs.net/UpdateSettingResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZyrhSensorServiceSoap12" type="tns:ZyrhSensorServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://www.3gvs.net/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadSensorDataInfo">
+      <soap12:operation soapAction="http://www.3gvs.net/UploadSensorDataInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateDeviceHeartbeatTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateDeviceSoftwareVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateDeviceDebugMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateSettingRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateSettingProcess" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <soap12:operation soapAction="http://www.3gvs.net/UpdateSettingResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZyrhSensorServiceHttpGet" type="tns:ZyrhSensorServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <http:operation location="/UpdateDeviceHeartbeatTime" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <http:operation location="/UpdateDeviceSoftwareVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <http:operation location="/UpdateDeviceDebugMode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <http:operation location="/UpdateSettingRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <http:operation location="/UpdateSettingProcess" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <http:operation location="/UpdateSettingResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZyrhSensorServiceHttpPost" type="tns:ZyrhSensorServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartbeatTime">
+      <http:operation location="/UpdateDeviceHeartbeatTime" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSoftwareVersion">
+      <http:operation location="/UpdateDeviceSoftwareVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceDebugMode">
+      <http:operation location="/UpdateDeviceDebugMode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingRequest">
+      <http:operation location="/UpdateSettingRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingProcess">
+      <http:operation location="/UpdateSettingProcess" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettingResponse">
+      <http:operation location="/UpdateSettingResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZyrhSensorService">
+    <wsdl:port name="ZyrhSensorServiceSoap" binding="tns:ZyrhSensorServiceSoap">
+      <soap:address location="http://122.227.179.90:81/ws/sensor.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZyrhSensorServiceSoap12" binding="tns:ZyrhSensorServiceSoap12">
+      <soap12:address location="http://122.227.179.90:81/ws/sensor.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZyrhSensorServiceHttpGet" binding="tns:ZyrhSensorServiceHttpGet">
+      <http:address location="http://122.227.179.90:81/ws/sensor.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZyrhSensorServiceHttpPost" binding="tns:ZyrhSensorServiceHttpPost">
+      <http:address location="http://122.227.179.90:81/ws/sensor.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

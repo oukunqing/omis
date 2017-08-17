@@ -1,0 +1,63 @@
+2016-09-11 00:03:23.068 Message: Specified cast is not valid.
+Source: App_Web_yp2foadb
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:04:53.196 Message: Specified cast is not valid.
+Source: App_Web_yp2foadb
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:04:58.749 Message: Specified cast is not valid.
+Source: App_Web_yp2foadb
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:12:13.182 Message: Specified cast is not valid.
+Source: App_Web_nqi435ne
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:13:24.533 Message: Specified cast is not valid.
+Source: App_Web_nqi435ne
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:15:18.624 Message: Specified cast is not valid.
+Source: App_Web_nrxey2uo
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:16:12.873 Message: Specified cast is not valid.
+Source: App_Web_hri3ubvv
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:16:44.355 Message: Specified cast is not valid.
+Source: App_Web_hri3ubvv
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-09-11 00:17:18.705 Message: Specified cast is not valid.
+Source: App_Web_d3am4eds
+StackTrace:    at ajax_system_system.GetRoleModuleMenuConfig(String data) in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 1537
+   at ajax_system_system.InitialData() in e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:line 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+

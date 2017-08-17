@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OMIS.DBA</name>
+    </assembly>
+    <members>
+        <member name="M:OMIS.DBA.DataCheck.CheckIdList(System.String@)">
+            <summary>
+            CheckIdList
+            </summary>
+            <param name="idList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OMIS.DBA.DataCheck.CheckIdList(System.String@,System.Boolean)">
+            <summary>
+            CheckIdListValidity
+            </summary>
+            <param name="idList"></param>
+            <param name="isNotZero"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OMIS.DBA.DataConvert.CompareTime(System.String@,System.String@)">
+            <summary>
+            CompareTime
+            If minTime is greater than maxTime, then swap.
+            </summary>
+            <param name="minTime"></param>
+            <param name="maxTime"></param>
+        </member>
+        <!-- 对于成员“M:OMIS.DBA.DataConvert.ConvertClassValue(System.Object,System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <!-- 对于成员“M:OMIS.DBA.DataConvert.FillDataValue(System.Data.DataRow,System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean,System.Boolean)”忽略有格式错误的 XML 注释 -->
+        <member name="M:OMIS.DBA.DataConvert.ConvertNumberToList(System.String,System.String[])">
+            <summary>
+            转换数字字符串为数组
+            </summary>
+            <param name="str"></param>
+            <param name="delimiter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OMIS.DBA.DataCondition.BuildInCondition(System.String,System.String,System.String)">
+            <summary>
+            BuildInCondition（where in condition [string]）
+            </summary>
+            <param name="condition"></param>
+            <param name="sqlMulti"></param>
+            <param name="sqlSingle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OMIS.DBA.DataCondition.BuildInIdCondition(System.String,System.String,System.String)">
+            <summary>
+            BuildInIdCondition
+            </summary>
+            <param name="condition"></param>
+            <param name="sqlMulti"></param>
+            <param name="sqlSingle"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:OMIS.DBA.DataCondition.BuildLimitCondition(System.Int32,System.Int32)”忽略有格式错误的 XML 注释 -->
+    </members>
+</doc>

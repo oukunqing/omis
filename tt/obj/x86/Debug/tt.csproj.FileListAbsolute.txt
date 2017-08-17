@@ -1,0 +1,10 @@
+E:\Projects\ZyrhCms\OMIS\tt\bin\Debug\tt.exe
+E:\Projects\ZyrhCms\OMIS\tt\bin\Debug\tt.pdb
+E:\Projects\ZyrhCms\OMIS\tt\obj\x86\Debug\tt.exe
+E:\Projects\ZyrhCms\OMIS\tt\obj\x86\Debug\tt.pdb
+E:\Projects\ZyrhCms\OMIS\tt\obj\x86\Debug\tt.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\tt\bin\Debug\tt.exe
+E:\Projects\ZyrhOMIS\OMIS\tt\bin\Debug\tt.pdb
+E:\Projects\ZyrhOMIS\OMIS\tt\obj\x86\Debug\tt.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\tt\obj\x86\Debug\tt.exe
+E:\Projects\ZyrhOMIS\OMIS\tt\obj\x86\Debug\tt.pdb

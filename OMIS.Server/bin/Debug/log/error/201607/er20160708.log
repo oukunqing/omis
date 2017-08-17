@@ -1,0 +1,168 @@
+2016-07-08 20:19:23 077 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:23 077 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:24 091 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:24 091 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:25 105 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:25 105 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:26 119 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:26 119 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:27 133 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:27 133 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:28 147 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:28 147 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:29 161 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:29 161 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:54 913 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:54 913 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:55 927 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenClientRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 57
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:19:55 943 Message: 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+Source: System
+StackTrace:    在 System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   在 System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   在 System.Net.Sockets.TcpListener.Start(Int32 backlog)
+   在 System.Net.Sockets.TcpListener.Start()
+   在 OMIS.Server.Listen.ServerListen.BeginListenDeviceRequest(Int32 port) 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Listen\ServerListen.cs:行号 23
+TargetSite: Void DoBind(System.Net.EndPoint, System.Net.SocketAddress)
+
+2016-07-08 20:20:41 080 Message: 无法从传输连接中读取数据: 远程主机强迫关闭了一个现有的连接。。
+Source: System
+StackTrace:    在 System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   在 OMIS.Server.Device.DeviceService.ReceiveClientMessage() 位置 E:\Projects\ZyrhCms\OMIS\OMIS.Server\Device\DeviceService.cs:行号 66
+TargetSite: Int32 Read(Byte[], Int32, Int32)
+

@@ -1,0 +1,10 @@
+E:\Projects\ZyrhCms\OMIS\OMIS.Sort\bin\Debug\OMIS.Sort.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.Sort\bin\Debug\OMIS.Sort.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.Sort\obj\Debug\OMIS.Sort.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.Sort\obj\Debug\OMIS.Sort.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.Sort\obj\Debug\OMIS.Sort.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Sort\bin\Debug\OMIS.Sort.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Sort\bin\Debug\OMIS.Sort.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Sort\obj\Debug\OMIS.Sort.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Sort\obj\Debug\OMIS.Sort.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Sort\obj\Debug\OMIS.Sort.pdb

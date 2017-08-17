@@ -1,0 +1,16 @@
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\bin\Debug\OMIS.DBA.dll
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\bin\Debug\OMIS.DBA.pdb
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\bin\Debug\MySql.Data.dll
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\bin\Debug\OMIS.DBUtility.dll
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\bin\Debug\OMIS.DBUtility.pdb
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\obj\Debug\OMIS.DBA.dll
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\obj\Debug\OMIS.DBA.pdb
+E:\Projects\ZyrhCms\zyrhcms\OMIS.DBA\obj\Debug\OMIS.DBA.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\bin\Debug\OMIS.DBA.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\bin\Debug\OMIS.DBA.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\bin\Debug\MySql.Data.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\bin\Debug\OMIS.DBUtility.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\bin\Debug\OMIS.DBUtility.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\obj\Debug\OMIS.DBA.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\obj\Debug\OMIS.DBA.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBA\obj\Debug\OMIS.DBA.pdb

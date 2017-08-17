@@ -1,0 +1,13 @@
+E:\Projects\ZyrhCms\OMIS\OMIS.DBUtility\bin\Debug\OMIS.DBUtility.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.DBUtility\bin\Debug\OMIS.DBUtility.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.pdb
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.DBUtility\bin\Debug\OMIS.DBUtility.dll
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.DBUtility\bin\Debug\OMIS.DBUtility.pdb
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.dll
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBUtility\bin\Debug\OMIS.DBUtility.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBUtility\bin\Debug\OMIS.DBUtility.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.csprojResolveAssemblyReference.cache
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.DBUtility\obj\Debug\OMIS.DBUtility.pdb

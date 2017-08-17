@@ -1,0 +1,12 @@
+E:\Projects\OMIS\OMIS.Enum\bin\Debug\OMIS.Enum.dll
+E:\Projects\OMIS\OMIS.Enum\bin\Debug\OMIS.Enum.pdb
+E:\Projects\OMIS\OMIS.Enum\obj\Debug\OMIS.Enum.dll
+E:\Projects\OMIS\OMIS.Enum\obj\Debug\OMIS.Enum.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.Enum\bin\Debug\OMIS.Enum.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.Enum\bin\Debug\OMIS.Enum.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.Enum\obj\Debug\OMIS.Enum.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.Enum\obj\Debug\OMIS.Enum.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Enum\bin\Debug\OMIS.Enum.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Enum\bin\Debug\OMIS.Enum.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Enum\obj\Debug\OMIS.Enum.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Enum\obj\Debug\OMIS.Enum.pdb

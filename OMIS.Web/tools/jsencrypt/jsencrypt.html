@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>packer_至强的javascript在线加密工具_新浪也在用</title>
+    <link rel="stylesheet" href="./files/screen.css" type="text/css" />
+    <link rel="stylesheet" href="./files/forms.css" type="text/css" />
+    <link rel="stylesheet" href="./files/packer.css" type="text/css" />
+    <script src="./files/base2.js" type="text/javascript"></script>
+    <script src="./files/Packer.js" type="text/javascript"></script>
+    <script src="./files/Words.js" type="text/javascript"></script>
+    <script src="./files/bindings.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	/*
+		function $I(i){
+			return document.getElementById(i);
+		}
+		function encrypt(){
+			var input = $I('input');
+			if(input.value){
+				try{
+					var packer = new Packer;
+					var value = packer.pack(input.value, $I('base62').checked, $I('shrink').checked);
+					$I('output').value = value;
+				}catch(e){
+					$I('message').innerHTML = e;
+				}
+			}
+		}
+
+		function decrypt(){
+			try{
+				eval("var value=String" + $I('output').value.slice(4));
+				var stop = new Date;
+				$I('output').value = value;
+			}catch(e){
+				$I('message').innerHTML = e;
+			}
+		}
+
+		function clearcon(){
+			$I('input').value = "";
+			$I('output').value = "";
+		}*/
+	</script>
+</head>
+<body id="packer">
+    <div class="document">
+        <div class="content">
+            <form class="" id="form" action="http://www.jb51.net/tools/packer.htm" method="post">
+			<p id="help">
+				<a href="http://dean.edwards.name/packer/usage/">Help</a>
+			</p>
+			<p>
+                <label class="paste">把要加密的代码复制到下面的文本框中:</label><br>
+                <textarea spellcheck="false" id="input" name="input" rows="10" cols="80" style="height:240px;">function add(num,num1){
+return num + num1;
+}</textarea>
+			</p>
+            <p id="controls">
+                <label for="base62">Base62 encode<input id="base62" name="base62" value="1" type="checkbox" checked="checked" /></label><br>
+                <label for="shrink">Shrink variables<input id="shrink" name="shrink" value="1" type="checkbox" /></label>
+            </p>
+            <p class="form-buttons" id="input-buttons">
+                <button type="button" id="clear-all" onclick="clearcon();">清空</button>
+                <button type="button" id="pack-script" onclick="encrypt();">压缩</button>
+            </p>
+            <p>
+                <label class="copy">加密压缩后的代码:</label>
+                <textarea spellcheck="false" id="output" name="output" rows="10" cols="80" style="height:200px;"></textarea></p>
+				<p id="message" class="">compression ratio: 337/86=3.919</p>
+				<p class="form-buttons" id="output-buttons">
+                <button type="button" id="decode-script" onclick="decrypt();">解码</button>
+            </p>
+            <fieldset class="hidden">
+                <input name="command" value="" type="hidden" />
+                <input name="filename" value="" type="hidden" />
+                <input name="filetype" value="" type="hidden" />
+            </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+2016-06-08 11:24:33 823 Message: Table 'spcp_cms.control_unit' doesn't exist
+Source: App_Web_sensordevice.aspx.3cd2a9ac.0di32eie
+StackTrace:    在 ajax_sensorDevice.GetDeviceTree(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensorDevice.aspx.cs:行号 93
+   在 ajax_sensorDevice.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensorDevice.aspx.cs:行号 39
+TargetSite: System.String GetDeviceTree(System.String)
+RawUrl: /OMIS.Web/ajax/sensorDevice.aspx?action=getDeviceTree
+
+2016-06-08 15:49:26 396 Message: 输入的不是有效的 Base-64 字符串，因为它包含非 Base-64 字符、两个以上的填充字符，或者填充字符间包含非法字符。
+Source: App_Web_gu5ioiam
+StackTrace:    在 ajax_system.GetModuleMenuList(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system.aspx.cs:行号 440
+   在 ajax_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system.aspx.cs:行号 70
+TargetSite: System.String GetModuleMenuList(System.String)
+RawUrl: /OMIS.Web/ajax/system.aspx
+

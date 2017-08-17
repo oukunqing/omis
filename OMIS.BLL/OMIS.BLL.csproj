@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4A1C39F-6A9B-441D-92BA-B2D412A2DA6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMIS.BLL</RootNamespace>
+    <AssemblyName>OMIS.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OMIS.BLL.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.Common\bin\Debug\OMIS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.DAL\bin\Debug\OMIS.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.DBA">
+      <HintPath>..\OMIS.DAL\bin\Debug\OMIS.DBA.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.Enum, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.Enum\bin\Debug\OMIS.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.DAL\bin\Debug\OMIS.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DictionaryManage.cs" />
+    <Compile Include="Common\DictionaryTypeManage.cs" />
+    <Compile Include="Sensor\SensorChannelConfigManage.cs" />
+    <Compile Include="Sensor\SensorChannelManage.cs" />
+    <Compile Include="Sensor\SensorChannelModeManage.cs" />
+    <Compile Include="Sensor\SensorChannelParamManage.cs" />
+    <Compile Include="Sensor\SensorDataManage.cs" />
+    <Compile Include="Sensor\SensorDeviceChannelManage.cs" />
+    <Compile Include="Sensor\SensorDeviceVersionManage.cs" />
+    <Compile Include="Sensor\SensorOriginalTypeManage.cs" />
+    <Compile Include="Sensor\SensorParamManage.cs" />
+    <Compile Include="Sensor\SensorTypeManage.cs" />
+    <Compile Include="Static\DataAccess.cs" />
+    <Compile Include="Static\DataCheck.cs" />
+    <Compile Include="Static\DataConvert.cs" />
+    <Compile Include="Content\CategoryManage.cs" />
+    <Compile Include="Content\TypeManage.cs" />
+    <Compile Include="System\MenuTypeManage.cs" />
+    <Compile Include="System\ModuleManage.cs" />
+    <Compile Include="System\ModulePermissionManage.cs" />
+    <Compile Include="System\NetworkLineManage.cs" />
+    <Compile Include="System\NetworkLineMenuManage.cs" />
+    <Compile Include="System\PermissionManage.cs" />
+    <Compile Include="System\PermissionTypeManage.cs" />
+    <Compile Include="System\RoleGroupManage.cs" />
+    <Compile Include="System\RoleManage.cs" />
+    <Compile Include="System\RoleMenuManage.cs" />
+    <Compile Include="System\RoleModuleMenuManage.cs" />
+    <Compile Include="System\RoleModulePermissionManage.cs" />
+    <Compile Include="System\UserCenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\MenuManage.cs" />
+    <Compile Include="System\ModuleMenuManage.cs" />
+    <Compile Include="System\UserManage.cs" />
+    <Compile Include="System\UserPersonManage.cs" />
+    <Compile Include="System\UserRoleManage.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

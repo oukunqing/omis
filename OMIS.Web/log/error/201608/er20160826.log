@@ -1,0 +1,42 @@
+2016-08-26 17:30:41 619 Message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select r.role_id,d.menu_id from sys_role_menu rm,sys_role r,sys_menu d  where rm' at line 1
+Source: App_Web_nb4l2nc4
+StackTrace:    在 ajax_system_system.GetRoleMenuConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 1451
+   在 ajax_system_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 222
+TargetSite: System.String GetRoleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-08-26 17:30:52 532 Message: 列“id”不属于表 Table1。
+Source: App_Web_nb4l2nc4
+StackTrace:    在 ajax_system_system.GetRoleModuleMenuConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 1548
+   在 ajax_system_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-08-26 17:30:58 635 Message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select r.role_id,d.menu_id from sys_role_menu rm,sys_role r,sys_menu d  where rm' at line 1
+Source: App_Web_nb4l2nc4
+StackTrace:    在 ajax_system_system.GetRoleMenuConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 1451
+   在 ajax_system_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 222
+TargetSite: System.String GetRoleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-08-26 17:31:12 066 Message: 列“id”不属于表 Table1。
+Source: App_Web_nb4l2nc4
+StackTrace:    在 ajax_system_system.GetRoleModuleMenuConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 1548
+   在 ajax_system_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-08-26 17:32:24 854 Message: 列“id”不属于表 Table1。
+Source: App_Web_rn3inlt3
+StackTrace:    在 ajax_system_system.GetRoleModuleMenuConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 1548
+   在 ajax_system_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+
+2016-08-26 17:35:28 968 Message: 列“id”不属于表 Table1。
+Source: App_Web_jkdija2x
+StackTrace:    在 ajax_system_system.GetRoleModuleMenuConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 1548
+   在 ajax_system_system.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\system\system.aspx.cs:行号 231
+TargetSite: System.String GetRoleModuleMenuConfig(System.String)
+RawUrl: /OMIS.Web/ajax/system/system.aspx
+

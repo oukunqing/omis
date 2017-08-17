@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="ZyrhWebService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="ZyrhWebService/AbstractTypes" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="ZyrhWebService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="ZyrhWebService">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseWebProtocol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXmlData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseWebProtocolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParseWebProtocolResult" type="tns:WebProtocol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebProtocol">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Model" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtocolDataList" type="tns:ArrayOfProtocolData" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtocolParameter" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendTime" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Timeout" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProtocolData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProtocolData" nillable="true" type="tns:ProtocolData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProtocolData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ParseMultiWebProtocol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXmlData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParseMultiWebProtocolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParseMultiWebProtocolResult" type="tns:ArrayOfWebProtocol" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfWebProtocol">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="WebProtocol" nillable="true" type="tns:WebProtocol" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateDeviceSettingDownStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="downStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDownTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceSettingDownStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceSettingDownStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceSettingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="sid" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="responseStatus" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResponseTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResponseContent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strErrorCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceSettingResponseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceSettingResponseResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDevCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUpdateDeviceStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDevCodeList" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BatchUpdateDeviceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BatchUpdateDeviceStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAllDeviceStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAllDeviceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateAllDeviceStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOvertimeDeviceStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="status" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="minutes" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateOvertimeDeviceStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateOvertimeDeviceStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceHeartBeat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDevCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHeartBeatTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateDeviceHeartBeatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateDeviceHeartBeatResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGprsServerHeartBeat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateGprsServerHeartBeatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateGprsServerHeartBeatResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateImageServerHeartBeat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateImageServerHeartBeatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateImageServerHeartBeatResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateServerHeartBeat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="serverType" type="tns:ServerTypeEnum" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUpdateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ServerTypeEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="GprsServer" />
+          <s:enumeration value="ImageServer" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="UpdateServerHeartBeatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateServerHeartBeatResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGprsTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTableName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateGprsTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateGprsTableResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddDeviceGprsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deviceGprsInfo" type="tns:DeviceGprsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeviceGprsInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GprsId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DevId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DevCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IOStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PTZPower" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PTZStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AccStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlarmInfo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PatrolMode" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BatteryPower" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Power3G" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status3G" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusTime3G" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SecurityStatus" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="IntercomStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetworkStandard" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SignalStrength" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialUpProcess" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PingTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlatformRegisterStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Latitude" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Longitude" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Speed" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Angle" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mileage" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="Temperature" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Humidity" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WindSpeed" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="WindDirection" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RainFall" type="s:float" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetworkAddr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NetworkPort" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpareIO" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordStatus" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Usim" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProtocolContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiveTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InfoDate" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddDeviceGprsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddDeviceGprsInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchAddDeviceGprsInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="deviceGprsInfoList" type="tns:ArrayOfDeviceGprsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDeviceGprsInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DeviceGprsInfo" nillable="true" type="tns:DeviceGprsInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BatchAddDeviceGprsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BatchAddDeviceGprsInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDevIndexCodeWithoutUserLogin">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDevIndexCodeWithoutUserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDevIndexCodeWithoutUserLoginResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadDeviceData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="info" type="tns:DataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DataInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeviceCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChannelNo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataContent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadDeviceDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadDeviceDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BatchUploadDeviceData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="list" type="tns:ArrayOfDataInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDataInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DataInfo" nillable="true" type="tns:DataInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="BatchUploadDeviceDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BatchUploadDeviceDataResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="WebProtocol" nillable="true" type="tns:WebProtocol" />
+      <s:element name="ArrayOfWebProtocol" nillable="true" type="tns:ArrayOfWebProtocol" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+      <s:element name="ArrayOfAnyType" nillable="true" type="tns:ArrayOfAnyType" />
+    </s:schema>
+    <s:schema targetNamespace="ZyrhWebService/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParseWebProtocolSoapIn">
+    <wsdl:part name="parameters" element="tns:ParseWebProtocol" />
+  </wsdl:message>
+  <wsdl:message name="ParseWebProtocolSoapOut">
+    <wsdl:part name="parameters" element="tns:ParseWebProtocolResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParseMultiWebProtocolSoapIn">
+    <wsdl:part name="parameters" element="tns:ParseMultiWebProtocol" />
+  </wsdl:message>
+  <wsdl:message name="ParseMultiWebProtocolSoapOut">
+    <wsdl:part name="parameters" element="tns:ParseMultiWebProtocolResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingDownStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceSettingDownStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingDownStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceSettingDownStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingResponseSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingResponseSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceSettingResponseResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateDeviceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:BatchUpdateDeviceStatus" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateDeviceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:BatchUpdateDeviceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDeviceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAllDeviceStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDeviceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAllDeviceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOvertimeDeviceStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateOvertimeDeviceStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOvertimeDeviceStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateOvertimeDeviceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartBeatSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceHeartBeat" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartBeatSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceHeartBeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGprsServerHeartBeatSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateGprsServerHeartBeat" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGprsServerHeartBeatSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateGprsServerHeartBeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageServerHeartBeatSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateImageServerHeartBeat" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageServerHeartBeatSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateImageServerHeartBeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerHeartBeatSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateServerHeartBeat" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerHeartBeatSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateServerHeartBeatResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateGprsTableSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateGprsTable" />
+  </wsdl:message>
+  <wsdl:message name="CreateGprsTableSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateGprsTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddDeviceGprsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddDeviceGprsInfo" />
+  </wsdl:message>
+  <wsdl:message name="AddDeviceGprsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddDeviceGprsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BatchAddDeviceGprsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:BatchAddDeviceGprsInfo" />
+  </wsdl:message>
+  <wsdl:message name="BatchAddDeviceGprsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:BatchAddDeviceGprsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIndexCodeWithoutUserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDevIndexCodeWithoutUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIndexCodeWithoutUserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDevIndexCodeWithoutUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadDeviceDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadDeviceData" />
+  </wsdl:message>
+  <wsdl:message name="UploadDeviceDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadDeviceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="BatchUploadDeviceDataSoapIn">
+    <wsdl:part name="parameters" element="tns:BatchUploadDeviceData" />
+  </wsdl:message>
+  <wsdl:message name="BatchUploadDeviceDataSoapOut">
+    <wsdl:part name="parameters" element="tns:BatchUploadDeviceDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseWebProtocolHttpGetIn">
+    <wsdl:part name="strXmlData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseWebProtocolHttpGetOut">
+    <wsdl:part name="Body" element="tns:WebProtocol" />
+  </wsdl:message>
+  <wsdl:message name="ParseMultiWebProtocolHttpGetIn">
+    <wsdl:part name="strXmlData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseMultiWebProtocolHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfWebProtocol" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingDownStatusHttpGetIn">
+    <wsdl:part name="sid" type="s:string" />
+    <wsdl:part name="downStatus" type="s:string" />
+    <wsdl:part name="strDownTime" type="s:string" />
+    <wsdl:part name="strErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingDownStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingResponseHttpGetIn">
+    <wsdl:part name="sid" type="s:string" />
+    <wsdl:part name="responseStatus" type="s:string" />
+    <wsdl:part name="strResponseTime" type="s:string" />
+    <wsdl:part name="strResponseContent" type="s:string" />
+    <wsdl:part name="strErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingResponseHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusHttpGetIn">
+    <wsdl:part name="strDevCode" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateDeviceStatusHttpGetIn">
+    <wsdl:part name="strDevCodeList" type="s1:StringArray" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateDeviceStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDeviceStatusHttpGetIn">
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDeviceStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOvertimeDeviceStatusHttpGetIn">
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="minutes" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOvertimeDeviceStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartBeatHttpGetIn">
+    <wsdl:part name="strDevCode" type="s:string" />
+    <wsdl:part name="strHeartBeatTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartBeatHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGprsServerHeartBeatHttpGetIn">
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGprsServerHeartBeatHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageServerHeartBeatHttpGetIn">
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageServerHeartBeatHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerHeartBeatHttpGetIn">
+    <wsdl:part name="serverType" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerHeartBeatHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CreateGprsTableHttpGetIn">
+    <wsdl:part name="strTableName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateGprsTableHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIndexCodeWithoutUserLoginHttpGetIn" />
+  <wsdl:message name="GetDevIndexCodeWithoutUserLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseWebProtocolHttpPostIn">
+    <wsdl:part name="strXmlData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseWebProtocolHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebProtocol" />
+  </wsdl:message>
+  <wsdl:message name="ParseMultiWebProtocolHttpPostIn">
+    <wsdl:part name="strXmlData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParseMultiWebProtocolHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfWebProtocol" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingDownStatusHttpPostIn">
+    <wsdl:part name="sid" type="s:string" />
+    <wsdl:part name="downStatus" type="s:string" />
+    <wsdl:part name="strDownTime" type="s:string" />
+    <wsdl:part name="strErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingDownStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingResponseHttpPostIn">
+    <wsdl:part name="sid" type="s:string" />
+    <wsdl:part name="responseStatus" type="s:string" />
+    <wsdl:part name="strResponseTime" type="s:string" />
+    <wsdl:part name="strResponseContent" type="s:string" />
+    <wsdl:part name="strErrorCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceSettingResponseHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusHttpPostIn">
+    <wsdl:part name="strDevCode" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateDeviceStatusHttpPostIn">
+    <wsdl:part name="strDevCodeList" type="s1:StringArray" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BatchUpdateDeviceStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDeviceStatusHttpPostIn">
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAllDeviceStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOvertimeDeviceStatusHttpPostIn">
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="minutes" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateOvertimeDeviceStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartBeatHttpPostIn">
+    <wsdl:part name="strDevCode" type="s:string" />
+    <wsdl:part name="strHeartBeatTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceHeartBeatHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGprsServerHeartBeatHttpPostIn">
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGprsServerHeartBeatHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageServerHeartBeatHttpPostIn">
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateImageServerHeartBeatHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerHeartBeatHttpPostIn">
+    <wsdl:part name="serverType" type="s:string" />
+    <wsdl:part name="strUpdateTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateServerHeartBeatHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CreateGprsTableHttpPostIn">
+    <wsdl:part name="strTableName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateGprsTableHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDevIndexCodeWithoutUserLoginHttpPostIn" />
+  <wsdl:message name="GetDevIndexCodeWithoutUserLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:portType name="ZyrhWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">解析WEB下发的协议XML文档</wsdl:documentation>
+      <wsdl:input message="tns:ParseWebProtocolSoapIn" />
+      <wsdl:output message="tns:ParseWebProtocolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">解析WEB下发的多个协议XML文档</wsdl:documentation>
+      <wsdl:input message="tns:ParseMultiWebProtocolSoapIn" />
+      <wsdl:output message="tns:ParseMultiWebProtocolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备设置下发状态（downStatus：0-未发送，1-成功，2-失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSettingDownStatusSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceSettingDownStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备设置回复状态（responseStatus：0-未回复，1-成功，2-失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSettingResponseSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceSettingResponseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备2G状态 status:1-在线;0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceStatusSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">批量更新设备2G状态</wsdl:documentation>
+      <wsdl:input message="tns:BatchUpdateDeviceStatusSoapIn" />
+      <wsdl:output message="tns:BatchUpdateDeviceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新全部设备2G状态（当服务器被关闭之前，更新全部设备为离线） status:1-在线;0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAllDeviceStatusSoapIn" />
+      <wsdl:output message="tns:UpdateAllDeviceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新已超时的设备2G状态（服务器启动后，将已超时的设备状态更新为离线） status:1-在线;0-离线 minutes:超时时间，单位：分钟</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOvertimeDeviceStatusSoapIn" />
+      <wsdl:output message="tns:UpdateOvertimeDeviceStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备心跳时间（时间格式：yyyy-MM-dd HH:mm:ss）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceHeartBeatSoapIn" />
+      <wsdl:output message="tns:UpdateDeviceHeartBeatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新GPRS服务器心跳时间，更新频率：60秒</wsdl:documentation>
+      <wsdl:input message="tns:UpdateGprsServerHeartBeatSoapIn" />
+      <wsdl:output message="tns:UpdateGprsServerHeartBeatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新图像比对服务器心跳时间，更新频率：60秒</wsdl:documentation>
+      <wsdl:input message="tns:UpdateImageServerHeartBeatSoapIn" />
+      <wsdl:output message="tns:UpdateImageServerHeartBeatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新服务器心跳时间，更新频率：60秒（strServerCode：GprsServer:30001,ImageServer:30002）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateServerHeartBeatSoapIn" />
+      <wsdl:output message="tns:UpdateServerHeartBeatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">创建GPRS数据表</wsdl:documentation>
+      <wsdl:input message="tns:CreateGprsTableSoapIn" />
+      <wsdl:output message="tns:CreateGprsTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceGprsInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">添加设备GPRS上报信息</wsdl:documentation>
+      <wsdl:input message="tns:AddDeviceGprsInfoSoapIn" />
+      <wsdl:output message="tns:AddDeviceGprsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchAddDeviceGprsInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">批量添加设备GPRS上报信息</wsdl:documentation>
+      <wsdl:input message="tns:BatchAddDeviceGprsInfoSoapIn" />
+      <wsdl:output message="tns:BatchAddDeviceGprsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获得长时间无用户登录的在线设备，用于定时关闭设备</wsdl:documentation>
+      <wsdl:input message="tns:GetDevIndexCodeWithoutUserLoginSoapIn" />
+      <wsdl:output message="tns:GetDevIndexCodeWithoutUserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadDeviceData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上传设备数据</wsdl:documentation>
+      <wsdl:input message="tns:UploadDeviceDataSoapIn" />
+      <wsdl:output message="tns:UploadDeviceDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUploadDeviceData">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">批量上传设备数据</wsdl:documentation>
+      <wsdl:input message="tns:BatchUploadDeviceDataSoapIn" />
+      <wsdl:output message="tns:BatchUploadDeviceDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ZyrhWebServiceHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">解析WEB下发的协议XML文档</wsdl:documentation>
+      <wsdl:input message="tns:ParseWebProtocolHttpGetIn" />
+      <wsdl:output message="tns:ParseWebProtocolHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">解析WEB下发的多个协议XML文档</wsdl:documentation>
+      <wsdl:input message="tns:ParseMultiWebProtocolHttpGetIn" />
+      <wsdl:output message="tns:ParseMultiWebProtocolHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备设置下发状态（downStatus：0-未发送，1-成功，2-失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSettingDownStatusHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceSettingDownStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备设置回复状态（responseStatus：0-未回复，1-成功，2-失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSettingResponseHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceSettingResponseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备2G状态 status:1-在线;0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceStatusHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">批量更新设备2G状态</wsdl:documentation>
+      <wsdl:input message="tns:BatchUpdateDeviceStatusHttpGetIn" />
+      <wsdl:output message="tns:BatchUpdateDeviceStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新全部设备2G状态（当服务器被关闭之前，更新全部设备为离线） status:1-在线;0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAllDeviceStatusHttpGetIn" />
+      <wsdl:output message="tns:UpdateAllDeviceStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新已超时的设备2G状态（服务器启动后，将已超时的设备状态更新为离线） status:1-在线;0-离线 minutes:超时时间，单位：分钟</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOvertimeDeviceStatusHttpGetIn" />
+      <wsdl:output message="tns:UpdateOvertimeDeviceStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备心跳时间（时间格式：yyyy-MM-dd HH:mm:ss）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceHeartBeatHttpGetIn" />
+      <wsdl:output message="tns:UpdateDeviceHeartBeatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新GPRS服务器心跳时间，更新频率：60秒</wsdl:documentation>
+      <wsdl:input message="tns:UpdateGprsServerHeartBeatHttpGetIn" />
+      <wsdl:output message="tns:UpdateGprsServerHeartBeatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新图像比对服务器心跳时间，更新频率：60秒</wsdl:documentation>
+      <wsdl:input message="tns:UpdateImageServerHeartBeatHttpGetIn" />
+      <wsdl:output message="tns:UpdateImageServerHeartBeatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新服务器心跳时间，更新频率：60秒（strServerCode：GprsServer:30001,ImageServer:30002）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateServerHeartBeatHttpGetIn" />
+      <wsdl:output message="tns:UpdateServerHeartBeatHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">创建GPRS数据表</wsdl:documentation>
+      <wsdl:input message="tns:CreateGprsTableHttpGetIn" />
+      <wsdl:output message="tns:CreateGprsTableHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获得长时间无用户登录的在线设备，用于定时关闭设备</wsdl:documentation>
+      <wsdl:input message="tns:GetDevIndexCodeWithoutUserLoginHttpGetIn" />
+      <wsdl:output message="tns:GetDevIndexCodeWithoutUserLoginHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ZyrhWebServiceHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">解析WEB下发的协议XML文档</wsdl:documentation>
+      <wsdl:input message="tns:ParseWebProtocolHttpPostIn" />
+      <wsdl:output message="tns:ParseWebProtocolHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">解析WEB下发的多个协议XML文档</wsdl:documentation>
+      <wsdl:input message="tns:ParseMultiWebProtocolHttpPostIn" />
+      <wsdl:output message="tns:ParseMultiWebProtocolHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备设置下发状态（downStatus：0-未发送，1-成功，2-失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSettingDownStatusHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceSettingDownStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备设置回复状态（responseStatus：0-未回复，1-成功，2-失败）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceSettingResponseHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceSettingResponseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备2G状态 status:1-在线;0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceStatusHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">批量更新设备2G状态</wsdl:documentation>
+      <wsdl:input message="tns:BatchUpdateDeviceStatusHttpPostIn" />
+      <wsdl:output message="tns:BatchUpdateDeviceStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新全部设备2G状态（当服务器被关闭之前，更新全部设备为离线） status:1-在线;0-离线</wsdl:documentation>
+      <wsdl:input message="tns:UpdateAllDeviceStatusHttpPostIn" />
+      <wsdl:output message="tns:UpdateAllDeviceStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新已超时的设备2G状态（服务器启动后，将已超时的设备状态更新为离线） status:1-在线;0-离线 minutes:超时时间，单位：分钟</wsdl:documentation>
+      <wsdl:input message="tns:UpdateOvertimeDeviceStatusHttpPostIn" />
+      <wsdl:output message="tns:UpdateOvertimeDeviceStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新设备心跳时间（时间格式：yyyy-MM-dd HH:mm:ss）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateDeviceHeartBeatHttpPostIn" />
+      <wsdl:output message="tns:UpdateDeviceHeartBeatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新GPRS服务器心跳时间，更新频率：60秒</wsdl:documentation>
+      <wsdl:input message="tns:UpdateGprsServerHeartBeatHttpPostIn" />
+      <wsdl:output message="tns:UpdateGprsServerHeartBeatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新图像比对服务器心跳时间，更新频率：60秒</wsdl:documentation>
+      <wsdl:input message="tns:UpdateImageServerHeartBeatHttpPostIn" />
+      <wsdl:output message="tns:UpdateImageServerHeartBeatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">更新服务器心跳时间，更新频率：60秒（strServerCode：GprsServer:30001,ImageServer:30002）</wsdl:documentation>
+      <wsdl:input message="tns:UpdateServerHeartBeatHttpPostIn" />
+      <wsdl:output message="tns:UpdateServerHeartBeatHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">创建GPRS数据表</wsdl:documentation>
+      <wsdl:input message="tns:CreateGprsTableHttpPostIn" />
+      <wsdl:output message="tns:CreateGprsTableHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获得长时间无用户登录的在线设备，用于定时关闭设备</wsdl:documentation>
+      <wsdl:input message="tns:GetDevIndexCodeWithoutUserLoginHttpPostIn" />
+      <wsdl:output message="tns:GetDevIndexCodeWithoutUserLoginHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ZyrhWebServiceSoap" type="tns:ZyrhWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="ZyrhWebService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <soap:operation soapAction="ZyrhWebService/ParseWebProtocol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <soap:operation soapAction="ZyrhWebService/ParseMultiWebProtocol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <soap:operation soapAction="ZyrhWebService/UpdateDeviceSettingDownStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <soap:operation soapAction="ZyrhWebService/UpdateDeviceSettingResponse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <soap:operation soapAction="ZyrhWebService/UpdateDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <soap:operation soapAction="ZyrhWebService/BatchUpdateDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <soap:operation soapAction="ZyrhWebService/UpdateAllDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <soap:operation soapAction="ZyrhWebService/UpdateOvertimeDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <soap:operation soapAction="ZyrhWebService/UpdateDeviceHeartBeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <soap:operation soapAction="ZyrhWebService/UpdateGprsServerHeartBeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <soap:operation soapAction="ZyrhWebService/UpdateImageServerHeartBeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <soap:operation soapAction="ZyrhWebService/UpdateServerHeartBeat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <soap:operation soapAction="ZyrhWebService/CreateGprsTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceGprsInfo">
+      <soap:operation soapAction="ZyrhWebService/AddDeviceGprsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchAddDeviceGprsInfo">
+      <soap:operation soapAction="ZyrhWebService/BatchAddDeviceGprsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <soap:operation soapAction="ZyrhWebService/GetDevIndexCodeWithoutUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDeviceData">
+      <soap:operation soapAction="ZyrhWebService/UploadDeviceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUploadDeviceData">
+      <soap:operation soapAction="ZyrhWebService/BatchUploadDeviceData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZyrhWebServiceSoap12" type="tns:ZyrhWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="ZyrhWebService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <soap12:operation soapAction="ZyrhWebService/ParseWebProtocol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <soap12:operation soapAction="ZyrhWebService/ParseMultiWebProtocol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <soap12:operation soapAction="ZyrhWebService/UpdateDeviceSettingDownStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <soap12:operation soapAction="ZyrhWebService/UpdateDeviceSettingResponse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <soap12:operation soapAction="ZyrhWebService/UpdateDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <soap12:operation soapAction="ZyrhWebService/BatchUpdateDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <soap12:operation soapAction="ZyrhWebService/UpdateAllDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <soap12:operation soapAction="ZyrhWebService/UpdateOvertimeDeviceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <soap12:operation soapAction="ZyrhWebService/UpdateDeviceHeartBeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <soap12:operation soapAction="ZyrhWebService/UpdateGprsServerHeartBeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <soap12:operation soapAction="ZyrhWebService/UpdateImageServerHeartBeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <soap12:operation soapAction="ZyrhWebService/UpdateServerHeartBeat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <soap12:operation soapAction="ZyrhWebService/CreateGprsTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceGprsInfo">
+      <soap12:operation soapAction="ZyrhWebService/AddDeviceGprsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchAddDeviceGprsInfo">
+      <soap12:operation soapAction="ZyrhWebService/BatchAddDeviceGprsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <soap12:operation soapAction="ZyrhWebService/GetDevIndexCodeWithoutUserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadDeviceData">
+      <soap12:operation soapAction="ZyrhWebService/UploadDeviceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUploadDeviceData">
+      <soap12:operation soapAction="ZyrhWebService/BatchUploadDeviceData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZyrhWebServiceHttpGet" type="tns:ZyrhWebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <http:operation location="/ParseWebProtocol" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <http:operation location="/ParseMultiWebProtocol" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <http:operation location="/UpdateDeviceSettingDownStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <http:operation location="/UpdateDeviceSettingResponse" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <http:operation location="/UpdateDeviceStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <http:operation location="/BatchUpdateDeviceStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <http:operation location="/UpdateAllDeviceStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <http:operation location="/UpdateOvertimeDeviceStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <http:operation location="/UpdateDeviceHeartBeat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <http:operation location="/UpdateGprsServerHeartBeat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <http:operation location="/UpdateImageServerHeartBeat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <http:operation location="/UpdateServerHeartBeat" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <http:operation location="/CreateGprsTable" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <http:operation location="/GetDevIndexCodeWithoutUserLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ZyrhWebServiceHttpPost" type="tns:ZyrhWebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseWebProtocol">
+      <http:operation location="/ParseWebProtocol" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParseMultiWebProtocol">
+      <http:operation location="/ParseMultiWebProtocol" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingDownStatus">
+      <http:operation location="/UpdateDeviceSettingDownStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceSettingResponse">
+      <http:operation location="/UpdateDeviceSettingResponse" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceStatus">
+      <http:operation location="/UpdateDeviceStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BatchUpdateDeviceStatus">
+      <http:operation location="/BatchUpdateDeviceStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAllDeviceStatus">
+      <http:operation location="/UpdateAllDeviceStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOvertimeDeviceStatus">
+      <http:operation location="/UpdateOvertimeDeviceStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceHeartBeat">
+      <http:operation location="/UpdateDeviceHeartBeat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGprsServerHeartBeat">
+      <http:operation location="/UpdateGprsServerHeartBeat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImageServerHeartBeat">
+      <http:operation location="/UpdateImageServerHeartBeat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateServerHeartBeat">
+      <http:operation location="/UpdateServerHeartBeat" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateGprsTable">
+      <http:operation location="/CreateGprsTable" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevIndexCodeWithoutUserLogin">
+      <http:operation location="/GetDevIndexCodeWithoutUserLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZyrhWebService">
+    <wsdl:port name="ZyrhWebServiceSoap" binding="tns:ZyrhWebServiceSoap">
+      <soap:address location="http://122.227.179.90:81/ws/gprs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZyrhWebServiceSoap12" binding="tns:ZyrhWebServiceSoap12">
+      <soap12:address location="http://122.227.179.90:81/ws/gprs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZyrhWebServiceHttpGet" binding="tns:ZyrhWebServiceHttpGet">
+      <http:address location="http://122.227.179.90:81/ws/gprs.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ZyrhWebServiceHttpPost" binding="tns:ZyrhWebServiceHttpPost">
+      <http:address location="http://122.227.179.90:81/ws/gprs.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+2016-06-06 08:38:52 147 Message: Duplicate entry 'CN' for key 'param_code_2'
+Source: App_Web_iurhjz1f
+StackTrace:    在 ajax_sensor.EditSensorParam(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 511
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 110
+TargetSite: System.String EditSensorParam(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+

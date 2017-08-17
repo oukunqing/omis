@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3623D957-BC07-4330-B82E-CF89D56FFAAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMIS.Model</RootNamespace>
+    <AssemblyName>OMIS.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DictionaryInfo.cs" />
+    <Compile Include="Common\DictionaryTypeInfo.cs" />
+    <Compile Include="DataResult.cs" />
+    <Compile Include="Sensor\SensorChannelConfigInfo.cs" />
+    <Compile Include="Sensor\SensorChannelInfo.cs" />
+    <Compile Include="Sensor\SensorChannelModeInfo.cs" />
+    <Compile Include="Sensor\SensorDataInfo.cs" />
+    <Compile Include="Sensor\SensorDeviceChannelInfo.cs" />
+    <Compile Include="Sensor\SensorChannelParamInfo.cs" />
+    <Compile Include="Sensor\SensorDeviceVersionInfo.cs" />
+    <Compile Include="Sensor\SensorOriginalTypeInfo.cs" />
+    <Compile Include="Sensor\SensorParamInfo.cs" />
+    <Compile Include="Sensor\SensorTypeInfo.cs" />
+    <Compile Include="System\RoleGroupInfocs.cs" />
+    <Compile Include="TypeResult.cs" />
+    <Compile Include="Content\CategoryInfo.cs" />
+    <Compile Include="Content\TypeInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\LoginStatusInfo.cs" />
+    <Compile Include="System\MenuInfo.cs" />
+    <Compile Include="System\MenuTypeInfo.cs" />
+    <Compile Include="System\ModuleInfo.cs" />
+    <Compile Include="System\ModuleMenuInfo.cs" />
+    <Compile Include="System\ModulePermissionInfo.cs" />
+    <Compile Include="System\NetworkLineInfo.cs" />
+    <Compile Include="System\NetworkLineMenuInfo.cs" />
+    <Compile Include="System\PermissionInfo.cs" />
+    <Compile Include="System\PermissionTypeInfo.cs" />
+    <Compile Include="System\RoleInfo.cs" />
+    <Compile Include="System\RoleMenuInfo.cs" />
+    <Compile Include="System\RoleModuleMenuInfo.cs" />
+    <Compile Include="System\RoleModulePermissionInfo.cs" />
+    <Compile Include="System\UserConfigInfo.cs" />
+    <Compile Include="System\UserInfo.cs" />
+    <Compile Include="System\UserPersonInfo.cs" />
+    <Compile Include="System\UserRoleInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Device\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

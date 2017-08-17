@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OMIS.Server.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OMIS_Server_SensorWS_ZyrhSensorService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://122.227.179.90:81/ws/sensor.asmx</Value>
+    </Setting>
+    <Setting Name="OMIS_Server_SensorWS1_ZyrhSensorService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://122.227.179.90:81/ws/sensor.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

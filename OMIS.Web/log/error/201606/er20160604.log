@@ -1,0 +1,35 @@
+2016-06-04 17:27:22 599 Message: Unknown column 'rm.channel_id' in 'where clause'
+Source: App_Web_qhqsehce
+StackTrace:    在 ajax_sensor.GetChannelParamConfig(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 729
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 131
+TargetSite: System.String GetChannelParamConfig(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-04 17:38:46 193 Message: Column count doesn't match value count at row 1
+Source: App_Web_4jsuiagl
+StackTrace:    在 ajax_sensor.EditChannelParam(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 758
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 128
+TargetSite: System.String EditChannelParam(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-04 17:40:31 531 Message: Column count doesn't match value count at row 1
+Source: App_Web_4jsuiagl
+StackTrace:    在 ajax_sensor.EditChannelParam(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 758
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 128
+TargetSite: System.String EditChannelParam(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-04 17:40:59 436 Message: Column count doesn't match value count at row 1
+Source: App_Web_ycabbfpl
+StackTrace:    在 ajax_sensor.EditChannelParam(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 758
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 128
+TargetSite: System.String EditChannelParam(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-04 17:41:34 270 Message: Column count doesn't match value count at row 1
+Source: App_Web_ycabbfpl
+StackTrace:    在 ajax_sensor.EditChannelParam(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 758
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 128
+TargetSite: System.String EditChannelParam(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+

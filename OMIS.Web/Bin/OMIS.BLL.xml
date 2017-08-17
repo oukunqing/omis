@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OMIS.BLL</name>
+    </assembly>
+    <members>
+        <member name="P:OMIS.BLL.System.UserCenter.LoginUserId">
+            <summary>
+            登录用户ID
+            </summary>
+        </member>
+        <member name="P:OMIS.BLL.System.UserCenter.IsLogin">
+            <summary>
+            是否已登录
+            </summary>
+        </member>
+        <member name="P:OMIS.BLL.System.UserCenter.RoleGroupId">
+            <summary>
+            登录用户角色组别ID（取最高组别）
+            </summary>
+        </member>
+        <member name="P:OMIS.BLL.System.UserCenter.IsGuest">
+            <summary>
+            是否为来宾帐户
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="sensor.aspx.cs" Inherits="ajax_sensor_sensor" %>

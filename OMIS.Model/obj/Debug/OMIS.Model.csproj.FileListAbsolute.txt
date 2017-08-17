@@ -1,0 +1,8 @@
+E:\Projects\ZyrhCms\OMIS\OMIS.Model\bin\Debug\OMIS.Model.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.Model\bin\Debug\OMIS.Model.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.Model\obj\Debug\OMIS.Model.dll
+E:\Projects\ZyrhCms\OMIS\OMIS.Model\obj\Debug\OMIS.Model.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Model\bin\Debug\OMIS.Model.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Model\bin\Debug\OMIS.Model.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Model\obj\Debug\OMIS.Model.dll
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Model\obj\Debug\OMIS.Model.pdb

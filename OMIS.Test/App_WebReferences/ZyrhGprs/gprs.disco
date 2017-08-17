@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://122.227.179.90:81/ws/gprs.asmx?wsdl" docRef="http://122.227.179.90:81/ws/gprs.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://122.227.179.90:81/ws/gprs.asmx" xmlns:q1="ZyrhWebService" binding="q1:ZyrhWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://122.227.179.90:81/ws/gprs.asmx" xmlns:q2="ZyrhWebService" binding="q2:ZyrhWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

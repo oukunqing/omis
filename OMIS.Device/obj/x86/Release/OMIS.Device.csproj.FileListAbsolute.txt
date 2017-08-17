@@ -1,0 +1,7 @@
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\bin\Release\OMIS.Device.exe
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\bin\Release\OMIS.Device.pdb
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\obj\x86\Release\OMIS.Device.frmDevice.resources
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\obj\x86\Release\OMIS.Device.Properties.Resources.resources
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\obj\x86\Release\OMIS.Device.csproj.GenerateResource.Cache
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\obj\x86\Release\OMIS.Device.exe
+E:\Programs\DOTNET\ASP.NET\zyrhcms\OMIS.Device\obj\x86\Release\OMIS.Device.pdb

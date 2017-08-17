@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OMIS.DAL</name>
+    </assembly>
+    <members>
+        <member name="M:OMIS.DAL.Common.DictionaryDBA.GetDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获得分类字典
+            </summary>
+            <param name="dic">
+            RootId: int, TypeId : int, GetSubset : int, TypeCode : string, Enabled : int, Number : int,
+            Keywords : string, SearchField : string, PageIndex : int, PageSize : int
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:OMIS.DAL.Common.DictionaryTypeDBA.GetDictionaryType(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获得字典分类
+            </summary>
+            <param name="dic">
+            TypeId : int, TypeIdList : string, TypeCode : string, Enabled : int, ParentId : int
+            </param>
+            <returns></returns>
+        </member>
+        <member name="F:OMIS.DAL.DataCheck.AlwaysPass">
+            <summary>
+            是否免检
+            </summary>
+        </member>
+        <member name="M:OMIS.DAL.System.MenuDBA.GetMenu(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获得导航菜单
+            </summary>
+            <param name="dic">
+            TypeId: int, MenuCode : string, Enabled : int, OpenType: int,
+            Keywords : string, SearchField : string, PageIndex : int, PageSize : int
+            </param>
+            <returns></returns>
+        </member>
+        <member name="M:OMIS.DAL.System.ModuleMenuDBA.GetModuleMenu(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            获得模块菜单
+            </summary>
+            <param name="dic">
+            RootId: int, ParentId : int, GetSubset : int, MenuCode : string, Enabled : int, MenuType : int, OpenType: int, ExcludeId : int,
+            Keywords : string, SearchField : string, PageIndex : int, PageSize : int
+            </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

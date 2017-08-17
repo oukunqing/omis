@@ -1,0 +1,21 @@
+2016-06-07 16:38:19 641 Message: Unknown column 'ct.type_id' in 'field list'
+Source: App_Web_q3swrk0h
+StackTrace:    在 ajax_sensor.DeleteSensorType(Int32 id) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 269
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 53
+TargetSite: System.String DeleteSensorType(Int32)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-07 16:39:05 905 Message: Unknown column 'ct.type_id' in 'field list'
+Source: App_Web_q3swrk0h
+StackTrace:    在 ajax_sensor.DeleteSensorType(Int32 id) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 269
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 53
+TargetSite: System.String DeleteSensorType(Int32)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-07 16:41:37 916 Message: Unknown column 'type_id' in 'where clause'
+Source: App_Web_d1gpj52k
+StackTrace:    在 ajax_sensor.DeleteSensorType(Int32 id) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 269
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 53
+TargetSite: System.String DeleteSensorType(Int32)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+

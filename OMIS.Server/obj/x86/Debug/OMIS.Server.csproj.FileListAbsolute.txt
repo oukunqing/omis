@@ -1,0 +1,10 @@
+E:\Projects\ZyrhCms\OMIS\OMIS.Server\bin\Debug\OMIS.Server.exe.config
+E:\Projects\ZyrhCms\OMIS\OMIS.Server\bin\Debug\OMIS.Server.exe
+E:\Projects\ZyrhCms\OMIS\OMIS.Server\bin\Debug\OMIS.Server.pdb
+E:\Projects\ZyrhCms\OMIS\OMIS.Server\obj\x86\Debug\OMIS.Server.exe
+E:\Projects\ZyrhCms\OMIS\OMIS.Server\obj\x86\Debug\OMIS.Server.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Server\bin\Debug\OMIS.Server.exe.config
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Server\bin\Debug\OMIS.Server.exe
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Server\bin\Debug\OMIS.Server.pdb
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Server\obj\x86\Debug\OMIS.Server.exe
+E:\Projects\ZyrhOMIS\OMIS\OMIS.Server\obj\x86\Debug\OMIS.Server.pdb

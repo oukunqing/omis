@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpMain.master.cs" Inherits="masters_mpMain" %><!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=PageTitle%></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="shortcut icon" href="<%=WebDir%>/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="<%=WebDir%>/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" /><asp:ContentPlaceHolder id="cphHead" runat="server"></asp:ContentPlaceHolder></head>
+<body><%=NoAuth%><%=Token.BuildToken()%><asp:ContentPlaceHolder id="cphBody" runat="server"></asp:ContentPlaceHolder></body>
+</html>
+<%=Public.LoadJs("jquery-1.12.4.js,common.js,cms.util.js,cms.jquery.js,popwin/popwin.js,cms.box.js,otree/otree.js", "/js/common/")%>
+<%=Public.LoadJs("module.js,user.js,frame.js", "/js/modules/")%><asp:ContentPlaceHolder id="cphFoot" runat="server"></asp:ContentPlaceHolder>

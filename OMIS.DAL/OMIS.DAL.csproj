@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D75B196F-5700-4C4C-9A29-D402E4D99B16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OMIS.DAL</RootNamespace>
+    <AssemblyName>OMIS.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OMIS.DAL.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\OMIS.DBA\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.Common\bin\Debug\OMIS.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.DBA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.DBA\bin\Debug\OMIS.DBA.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.DBUtility">
+      <HintPath>..\OMIS.DBA\bin\Debug\OMIS.DBUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.Enum">
+      <HintPath>..\OMIS.Enum\bin\Debug\OMIS.Enum.dll</HintPath>
+    </Reference>
+    <Reference Include="OMIS.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\OMIS.Model\bin\Debug\OMIS.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\DictionaryDBA.cs" />
+    <Compile Include="Common\DictionaryTypeDBA.cs" />
+    <Compile Include="Sensor\SensorChannelConfigDBA.cs" />
+    <Compile Include="Sensor\SensorChannelDBA.cs" />
+    <Compile Include="Sensor\SensorChannelModeDBA.cs" />
+    <Compile Include="Sensor\SensorChannelParamDBA.cs" />
+    <Compile Include="Sensor\SensorDataDBA.cs" />
+    <Compile Include="Sensor\SensorDeviceChannelDBA.cs" />
+    <Compile Include="Sensor\SensorDeviceVersionDBA.cs" />
+    <Compile Include="Sensor\SensorOriginalTypeDBA.cs" />
+    <Compile Include="Sensor\SensorParamDBA.cs" />
+    <Compile Include="Sensor\SensorTypeDBA.cs" />
+    <Compile Include="Static\Common.cs" />
+    <Compile Include="Static\DataAccess.cs" />
+    <Compile Include="Static\DataCheck.cs" />
+    <Compile Include="Static\DataCondition.cs" />
+    <Compile Include="Static\DataConvert.cs" />
+    <Compile Include="Static\MssqlDataAccess.cs" />
+    <Compile Include="Static\MysqlDataAccess.cs" />
+    <Compile Include="Static\OracleDataAccess.cs" />
+    <Compile Include="Content\CategoryDBA.cs" />
+    <Compile Include="Content\TypeDBA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\MenuDBA.cs" />
+    <Compile Include="System\MenuTypeDBA.cs" />
+    <Compile Include="System\ModuleDBA.cs" />
+    <Compile Include="System\ModuleMenuDBA.cs" />
+    <Compile Include="System\ModulePermissionDBA.cs" />
+    <Compile Include="System\NetworkLineDBA.cs" />
+    <Compile Include="System\NetworkLineMenuDBA.cs" />
+    <Compile Include="System\PermissionDBA.cs" />
+    <Compile Include="System\PermissionTypeDBA.cs" />
+    <Compile Include="System\RoleDBA.cs" />
+    <Compile Include="System\RoleGroupDBA.cs" />
+    <Compile Include="System\RoleMenuDBA.cs" />
+    <Compile Include="System\RoleModuleMenuDBA.cs" />
+    <Compile Include="System\RoleModulePermissionDBA.cs" />
+    <Compile Include="System\UserDBA.cs" />
+    <Compile Include="System\UserPersonDBA.cs" />
+    <Compile Include="System\UserRoleDBA.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

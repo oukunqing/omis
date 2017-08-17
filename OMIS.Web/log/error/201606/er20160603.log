@@ -1,0 +1,14 @@
+2016-06-03 13:17:54 580 Message: Unknown column 'pd.type_id' in 'on clause'
+Source: App_Web_qbt32pzy
+StackTrace:    在 ajax_sensor.GetSensorTypeList(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 139
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 46
+TargetSite: System.String GetSensorTypeList(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+
+2016-06-03 14:32:21 795 Message: Duplicate entry '1' for key 'channel_no'
+Source: App_Web_huq5mlaz
+StackTrace:    在 ajax_sensor.EditSensorChannel(String data) 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 360
+   在 ajax_sensor.InitialData() 位置 e:\Projects\ZyrhCms\OMIS\OMIS.Web\ajax\sensor.aspx.cs:行号 77
+TargetSite: System.String EditSensorChannel(System.String)
+RawUrl: /OMIS.Web/ajax/sensor.aspx
+

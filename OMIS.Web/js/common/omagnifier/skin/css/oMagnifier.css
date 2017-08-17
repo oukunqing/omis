@@ -1,0 +1,13 @@
+.omagnifier-box{}
+.omagnifier-box .om-canvas{overflow:hidden; border:solid 1px #ccc;}
+.omagnifier-box .om-canvas img{margin:0;padding:0;display:block;}
+.omagnifier-box .om-listbox{margin:5px 0 0; padding:0; height:54px; clear:both; overflow:hidden;}
+.omagnifier-box .om-imgbox{height:52px; *height:54px; _height:54px; overflow:hidden; float:left; 
+	border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+.omagnifier-box .om-imglist{display:block; margin:5px 4px 0; padding:0; overflow:hidden;}
+.omagnifier-box .om-imglist img{width:50px;height:40px; margin:0 4px 0 0; float:left; border:solid 1px #ccc; }
+.omagnifier-box .om-imglist .om-cur{border:solid 1px #f00;}
+
+.omagnifier-box .om-switch{width:17px;height:54px;cursor:pointer; background-image:url("../imgs/lr.png");}
+.omagnifier-box .om-switch-left{float:left;}
+.omagnifier-box .om-switch-right{float:right; background-position:right 0;}

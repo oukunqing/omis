@@ -1,0 +1,2 @@
+﻿document.write('<scr'+'ipt src="http://s73.cnzz.com/stat.php?id=1585378&web_id=1585378" language="JavaScript"></sc'+'ript>');
+document.write ('<scr'+'ipt language="javascript" type="text/javascript" src="http://js.users.51.la/460228.js"></scr'+'ipt>');
